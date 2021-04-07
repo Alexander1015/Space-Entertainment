@@ -1,0 +1,50 @@
+$fondo: #273752;
+$barras: #f3f3f3;
+.container_Loader {
+    background-color: $fondo;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    transition: all 1.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loader,
+    .loader:before,
+    .loader:after {
+        border-radius: 2.5%;
+        width: 2.5em;
+        height: 3.2em;
+        animation: loader 1.5s infinite ease-in-out;
+    }
+    .loader {
+        color: $barras;
+        font-size: 13px;
+        position: relative;
+        animation-delay: -0.15s;
+    }
+    .loader:before,
+    .loader:after {
+        content: "";
+        position: absolute;
+        top: 0;
+    }
+    .loader:before {
+        right: 3.5em;
+        animation-delay: -0.3s;
+    }
+    .loader:after {
+        left: 3.5em;
+    }
+}
+@keyframes loader {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 -8em -1em;
+    }
+    40% {
+        box-shadow: 0 -8em 0 0;
+    }
+}

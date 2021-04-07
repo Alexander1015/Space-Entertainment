@@ -1,0 +1,14 @@
+$fondo: #273752;
+$colorsec: #f3f3f3;
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body {
+    background: $fondo;
+    color: $colorsec;
+}
