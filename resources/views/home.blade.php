@@ -1,9 +1,10 @@
 @extends("layouts.app")
 
-@section("title", "Space Entertainment - Home")
+@section('title', 'Home')
 
-@section("content")
-<div class="container">
-HOLAAAAAAAAAAAAAAA
-</div>
+@section('content')
+    @include("layouts.slider")
+    <div class="container">
+        <div id="relleno"></div>
+    </div>
 @endsection

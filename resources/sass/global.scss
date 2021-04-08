@@ -1,14 +1,106 @@
-$fondo: #273752;
-$colorsec: #f3f3f3;
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-}
+$principal: #121034;
+$secundario: #19182d;
+$terciario: #201c39;
+$borde: #293d5b;
+$texto: #fdfdfd;
 body {
-    background: $fondo;
-    color: $colorsec;
+    background-color: $principal;
+    background-color: linear-gradient(
+        90deg,
+        $principal 10%,
+        $secundario 55%,
+        $terciario 90%
+    );
+    #navsup {
+        $espacnav: 5em;
+        height: $espacnav;
+        width: 100vw;
+        margin-bottom: -$espacnav;
+        position: fixed;
+        z-index: 9998;
+        transition: background-color 0.5s ease-in;
+        transition: border-bottom 0.5s ease-in;
+        .dimemu {
+            color: $texto;
+        }
+        img {
+            height: 2.5em;
+            border-radius: 0.2em;
+        }
+        form {
+            margin-right: 1em;
+            span,
+            input,
+            button {
+                border-color: $borde;
+            }
+            input {
+                width: 20em;
+            }
+            button {
+                background-color: $principal;
+                background-color: linear-gradient(
+                    90deg,
+                    $principal 10%,
+                    $secundario 55%,
+                    $terciario 90%
+                );
+                color: $texto;
+                transition: 0.2s;
+                i {
+                    float: right;
+                    margin-left: 0.2em;
+                }
+            }
+            button:hover {
+                background-color: $texto;
+                color: $principal;
+            }
+        }
+    }
+    #sliderprincipal {
+        img {
+            height: 85vh;
+            width: auto;
+        }
+    }
+
+    #relleno {
+        height: 50em;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        #navsup {
+            img {
+                display: none;
+            }
+            form {
+                input {
+                    width: 15em;
+                }
+            }
+        }
+        #sliderprincipal {
+            img {
+                height: 55vh;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        #navsup {
+            form {
+                input {
+                    margin: 1em 0em 0.5em;
+                    width: 90%;
+                    display: block;
+                }
+            }
+        }
+    }
 }

@@ -1,7 +1,10 @@
-$fondo: #273752;
-$barras: #f3f3f3;
+$principal: #121034;
+$secundario: #19182d;
+$terciario: #201c39;
+$barras: #fdfdfd;
 .container_Loader {
-    background-color: $fondo;
+    background-color: $principal;
+    background-color: linear-gradient(90deg, $principal 10%, $secundario 55%, $terciario 90%);
     position: fixed;
     width: 100vw;
     height: 100vh;

@@ -1,12 +1,11 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Nunito");
-
+@import "fonts";
 // Variables
 @import "variables";
-
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";
-
+//@import "~bootstrap/scss/bootstrap"; //npm run dev
+@import "../../node_modules/bootstrap/scss/bootstrap.scss"; //sass --watch resources/sass/app.scss public/css/app.css
 //Estilos propios
+@import "normalize";
 @import "global";
 @import "loader";
