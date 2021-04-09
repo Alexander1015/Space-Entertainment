@@ -10297,8 +10297,7 @@ template {
 }
 
 body {
-  background-color: #121034;
-  background-color: linear-gradient(90deg, #121034 10%, #19182d 55%, #201c39 90%);
+  background: linear-gradient(90deg, #143349 10%, #142e49 50%, #273250 90%);
 }
 body #navsup {
   height: 5em;
@@ -10321,15 +10320,21 @@ body #navsup form {
 }
 body #navsup form span,
 body #navsup form input,
-body #navsup form button {
-  border-color: #293d5b;
+body #navsup form button,
+body #navsup form select {
+  border-color: #40516c;
 }
 body #navsup form input {
   width: 20em;
 }
+body #navsup form select {
+  border-radius: 0em;
+  cursor: pointer;
+  background-color: #fdfdfd;
+  color: #143349;
+}
 body #navsup form button {
-  background-color: #121034;
-  background-color: linear-gradient(90deg, #121034 10%, #19182d 55%, #201c39 90%);
+  background-color: #143349;
   color: #fdfdfd;
   transition: 0.2s;
 }
@@ -10339,14 +10344,31 @@ body #navsup form button i {
 }
 body #navsup form button:hover {
   background-color: #fdfdfd;
-  color: #121034;
+  color: #143349;
+}
+body #sliderprincipal h1 i {
+  float: right;
+  margin-left: 0.2em;
 }
 body #sliderprincipal img {
-  height: 85vh;
-  width: auto;
+  height: auto;
+  width: 100vw;
+}
+body #sliderprincipal p {
+  text-align: justify;
+}
+body #sliderprincipal .slidebottom {
+  width: 100%;
+  height: 25em;
+  position: absolute;
+  margin-top: -20em;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, rgba(20, 46, 73, 0.4) 10%, rgba(20, 51, 73, 0.7) 30%, #273250 50%);
+}
+body #mostrar {
+  background: #273250;
 }
 body #relleno {
-  height: 50em;
+  height: 60em;
 }
 
 @media only screen and (max-width: 720px) {
@@ -10357,8 +10379,11 @@ body #relleno {
     width: 15em;
   }
   body #sliderprincipal img {
-    height: 55vh;
-    width: auto;
+    height: auto;
+    width: 100vw;
+  }
+  body #sliderprincipal p {
+    display: none;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -10369,8 +10394,7 @@ body #relleno {
   }
 }
 .container_Loader {
-  background-color: #121034;
-  background-color: linear-gradient(90deg, #121034 10%, #19182d 55%, #201c39 90%);
+  background: linear-gradient(0deg, #143349 10%, #142e49 50%, #273250 90%);
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -10381,8 +10405,8 @@ body #relleno {
   justify-content: center;
 }
 .container_Loader .loader,
-.container_Loader .loader:before,
-.container_Loader .loader:after {
+.container_Loader .loader::before,
+.container_Loader .loader::after {
   border-radius: 2.5%;
   width: 2.5em;
   height: 3.2em;
@@ -10394,17 +10418,17 @@ body #relleno {
   position: relative;
   animation-delay: -0.15s;
 }
-.container_Loader .loader:before,
-.container_Loader .loader:after {
+.container_Loader .loader::before,
+.container_Loader .loader::after {
   content: "";
   position: absolute;
   top: 0;
 }
-.container_Loader .loader:before {
+.container_Loader .loader::before {
   right: 3.5em;
   animation-delay: -0.3s;
 }
-.container_Loader .loader:after {
+.container_Loader .loader::after {
   left: 3.5em;
 }
 

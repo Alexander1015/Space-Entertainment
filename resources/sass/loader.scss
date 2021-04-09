@@ -1,10 +1,14 @@
-$principal: #121034;
-$secundario: #19182d;
-$terciario: #201c39;
+$principal: #143349;
+$secundario: #142e49;
+$terciario: #273250;
 $barras: #fdfdfd;
 .container_Loader {
-    background-color: $principal;
-    background-color: linear-gradient(90deg, $principal 10%, $secundario 55%, $terciario 90%);
+    background: linear-gradient(
+        0deg,
+        $principal 10%,
+        $secundario 50%,
+        $terciario 90%
+    );
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -14,8 +18,8 @@ $barras: #fdfdfd;
     align-items: center;
     justify-content: center;
     .loader,
-    .loader:before,
-    .loader:after {
+    .loader::before,
+    .loader::after {
         border-radius: 2.5%;
         width: 2.5em;
         height: 3.2em;
@@ -27,17 +31,17 @@ $barras: #fdfdfd;
         position: relative;
         animation-delay: -0.15s;
     }
-    .loader:before,
-    .loader:after {
+    .loader::before,
+    .loader::after {
         content: "";
         position: absolute;
         top: 0;
     }
-    .loader:before {
+    .loader::before {
         right: 3.5em;
         animation-delay: -0.3s;
     }
-    .loader:after {
+    .loader::after {
         left: 3.5em;
     }
 }

@@ -16,23 +16,21 @@
     </div>
     <nav id="navsup" class="navbar">
         <a class="navicon navbar-brand" href="#">
-            <img class="float-left" loading="lazy" src="{{ asset('img/icons/logo_largo.png') }}"
+            <img loading="lazy" class="float-left" src="{{ asset('img/icons/logo_largo.png') }}"
                 alt="Space Entertainment">
         </a>
         <form class="form-inline">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Buscar tus series/peliculas favoritas"
                     aria-label="Buscar tus series/peliculas favoritas" aria-describedby="txtBuscar">
-                <div class="dropdown input-group-prepend">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dmnBuscar"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Buscar por...
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dmnBuscar">
-                        <a class="dropdown-item" href="#">Serie</a>
-                        <a class="dropdown-item" href="#">Película</a>
-                        <a class="dropdown-item" href="#">Anime</a>
-                    </div>
+                <div class="input-group-prepend">
+                    <select class="custom-select" id="selBuscar">
+                        <option value="">N/A</option>
+                        <option hidden selected>Buscar por...</option>
+                        <option value="1">Anime</option>
+                        <option value="2">Película</option>
+                        <option value="3">Serie</option>
+                    </select>
                 </div>
                 <div class="input-group-append">
                     <button type="button" id="btnbuscar" class="btn btn-primary">Buscar

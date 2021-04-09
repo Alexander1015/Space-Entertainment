@@ -4,7 +4,9 @@
 
 @section('content')
     @include("layouts.slider")
-    <div class="container">
-        <div id="relleno"></div>
+    <div id="mostrar">
+        <div class="container">
+            <div id="relleno"></div>
+        </div>
     </div>
 @endsection
