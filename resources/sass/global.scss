@@ -1,62 +1,12 @@
-$principal: #143349;
-$secundario: #142e49;
-$terciario: #273250;
+$botones: #143349;
+$fondo: #273250;
+$fondoalt: #142e49;
 $borde: #40516c;
 $texto: #fdfdfd;
 body {
-    background: linear-gradient(
-        90deg,
-        $principal 10%,
-        $secundario 50%,
-        $terciario 90%
-    );
-    #navsup {
-        $espacnav: 5em;
-        height: $espacnav;
-        width: 100vw;
-        margin-bottom: -$espacnav;
-        position: fixed;
-        z-index: 9998;
-        transition: background-color 0.5s ease-in;
-        transition: border-bottom 0.5s ease-in;
-        .dimemu {
-            color: $texto;
-        }
-        img {
-            height: 2.5em;
-            border-radius: 0.2em;
-        }
-        form {
-            margin-right: 1em;
-            span,
-            input,
-            button,
-            select {
-                border-color: $borde;
-            }
-            input {
-                width: 20em;
-            }
-            select {
-                border-radius: 0em;
-                cursor: pointer;
-                background-color: $texto;
-                color: $principal;
-            }
-            button {
-                background-color: $principal;
-                color: $texto;
-                transition: 0.2s;
-                i {
-                    float: right;
-                    margin-left: 0.2em;
-                }
-            }
-            button:hover {
-                background-color: $texto;
-                color: $principal;
-            }
-        }
+    background: $fondo;
+    a, a:hover {
+        text-decoration: none;
     }
     #sliderprincipal {
         h1 {
@@ -66,9 +16,8 @@ body {
             }
         }
         img {
-
             height: auto;
-            width: 100vw;
+            width: 100%;
         }
         p {
             text-align: justify;
@@ -80,17 +29,13 @@ body {
             margin-top: -20em;
             background: linear-gradient(
                 180deg,
-                rgba(0,0,0, 0) 5%,
-                rgba(20,46,73,0.4) 10%,
-                rgba(20,51,73,0.7) 30%,
-                rgba(39,50,80, 1) 50%
+                rgba(0, 0, 0, 0) 5%,
+                rgba(20, 46, 73, 0.4) 10%,
+                rgba(20, 51, 73, 0.7) 30%,
+                rgba(39, 50, 80, 1) 50%
             );
         }
     }
-    #mostrar {
-        background: $terciario;
-    }
-
     #relleno {
         height: 60em;
     }
@@ -98,19 +43,8 @@ body {
 
 @media only screen and (max-width: 720px) {
     body {
-        #navsup {
-            img {
-                display: none;
-            }
-            form {
-                input {
-                    width: 15em;
-                }
-            }
-        }
         #sliderprincipal {
             img {
-
                 height: auto;
                 width: 100vw;
             }
@@ -123,14 +57,8 @@ body {
 
 @media only screen and (max-width: 480px) {
     body {
-        #navsup {
-            form {
-                input {
-                    margin: 1em 0em 0.5em;
-                    width: 90%;
-                    display: block;
-                }
-            }
+        #sliderprincipal {
+            margin-top: 0.9em;
         }
     }
 }

@@ -1,0 +1,234 @@
+$botones: #143349;
+$fondo: #273250;
+$fondoalt: #142e49;
+$borde: #40516c;
+$texto: #fdfdfd;
+body {
+    #navlat {
+        float: left;
+        z-index: 20;
+        position: fixed;
+        background: $fondo;
+        top: 5em;
+        bottom: 0em;
+        border: 1px $texto solid;
+        width: 20em;
+        transition: margin-left 0.5s ease-in;
+        margin-left: -17em;
+        //overflow: scroll; //Le da un scroll al div
+        //overflow-x: hidden; //Oculta el scroll en este caso el horizontal
+        .btnmenu {
+            padding: 1em;
+            display: none;
+            background: $fondo;
+            color: $texto;
+            height: 4em;
+            img {
+                height: 3em;
+                width: auto;
+                border-radius: 0.2em;
+                margin-left: 1em;
+                margin-top: -0.4em;
+            }
+            i {
+                float: right;
+            }
+        }
+        .btnmenuhor {
+            padding: 0.75em;
+            display: block;
+            background: $fondo;
+            color: $texto;
+            i {
+                float: right;
+            }
+        }
+        ul {
+            list-style: none;
+            margin-bottom: 0em;
+        }
+        .menu {
+            padding-left: 0em;
+            transition: margin-right 0.5s ease-in;
+            margin-right: 3em;
+            li {
+                width: 100%;
+                border: 1px $borde solid;
+                a {
+                    background: $fondoalt;
+                    color: $texto;
+                    display: block;
+                    width: 100%;
+                    padding: 0.1em 0em;
+                    p {
+                        padding: 0.25em 0.5em;
+                    }
+                }
+                a:hover {
+                    background-color: $borde;
+                    color: $texto;
+                }
+                ul {
+                    padding-left: 0em;
+                    display: none;
+                    li {
+                        a {
+                            background: $botones;
+                            color: $texto;
+                        }
+                        a:hover {
+                            background: $borde;
+                            color: $texto;
+                        }
+                    }
+                }
+            }
+            .buscador {
+                display: none;
+                padding: 0.25em 0.5em;
+            }
+            .izquierda {
+                float: left;
+                margin-right: 1em;
+            }
+            .derecha {
+                float: right;
+                margin-left: 1em;
+            }
+            .activado {
+                background: $borde;
+                color: $texto;
+            }
+        }
+    }
+    #navsup {
+        $hnav: 5em;
+        height: $hnav;
+        width: 100vw;
+        margin-bottom: -$hnav;
+        position: fixed;
+        z-index: 20;
+        transition: background-color 0.5s ease-in;
+        transition: border-bottom 0.5s ease-in;
+        img {
+            height: 3em;
+            width: auto;
+            border-radius: 0.2em;
+            margin-left: 0.15em;
+            margin-top: -0.4em;
+        }
+        .dimemu {
+            color: $texto;
+        }
+        form {
+            margin-right: 1em;
+            span,
+            input,
+            button,
+            select {
+                border-color: $borde;
+            }
+            input {
+                width: 20em;
+            }
+            select {
+                border-radius: 0em;
+                cursor: pointer;
+                background-color: $texto;
+                color: $botones;
+            }
+            button {
+                background-color: $botones;
+                color: $texto;
+                transition: 0.2s;
+                i {
+                    float: right;
+                    margin-left: 0.2em;
+                }
+            }
+            button:hover {
+                background-color: $borde;
+                color: $texto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    body {
+        #navsup {
+            img {
+                display: none;
+            }
+            form {
+                input {
+                    width: 15em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        padding-top: 3.25em;
+        #navlat {
+            margin: 0em;
+            width: 100%;
+            position: fixed;
+            top: 0em;
+            z-index: 25;
+            overflow: hidden;
+            border: 0px solid;
+            .btnmenu {
+                display: block;
+            }
+            .btnmenuhor {
+                display: none;
+            }
+            .menu {
+                display: none;
+                .buscador {
+                    display: inline-block;
+                    form {
+                        margin: 1em;
+                        span,
+                        input,
+                        button,
+                        select {
+                            border-color: $borde;
+                        }
+                        input {
+                            width: 20em;
+                        }
+                        select {
+                            border-radius: 0em;
+                            border-top-right-radius: 0.3em;
+                            border-bottom-right-radius: 0.3em;
+                            cursor: pointer;
+                            background-color: $texto;
+                            color: $botones;
+                        }
+                        button {
+                            background-color: $botones;
+                            color: $texto;
+                            transition: 0.2s;
+                            margin: 1em auto;
+                            i {
+                                float: right;
+                                margin-left: 0.2em;
+                            }
+                        }
+                        button:hover {
+                            background-color: $borde;
+                            color: $texto;
+                        }
+                    }
+                }
+            }
+        }
+        #navsup {
+            display: none;
+        }
+    }
+}
